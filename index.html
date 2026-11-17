@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>University Student Information Portal</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="brand">
+          <h1>Northbridge University</h1>
+        </div>
+        <nav class="top-nav" aria-label="Main navigation">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#student-registration">Student Registration</a>
+          <a href="#contact">Contact Us</a>
+        </nav>
+      </header>
+
+      <main class="layout">
+        <section id="home" class="hero">
+          <h2>Welcome to the Student Information Portal</h2>
+          <p>
+            Access academic information, manage student details, and register for
+            studies in a secure and user-friendly portal.
+          </p>
+        </section>
+
+        <section id="about" class="about-section">
+          <h3>About</h3>
+          <p>
+            The Student Information Portal is designed to support students,
+            lecturers, and administrators by centralizing academic records,
+            registration data, and programme details in one digital platform. It
+            helps streamline communication and improve service delivery within the
+            university environment.
+          </p>
+        </section>
+
+        <section class="programmes-section">
+          <h3>Academic Programmes</h3>
+          <ul>
+            <li>Bachelor of Computer Science</li>
+            <li>Bachelor of Business Administration</li>
+            <li>Bachelor of Education</li>
+            <li>Bachelor of Nursing</li>
+          </ul>
+        </section>
+
+        <section class="student-table-section">
+          <h3>Student Information</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Student ID</th>
+                <th>Student Name</th>
+                <th>Registration Number</th>
+                <th>Programme</th>
+                <th>Year of Study</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>STD-101</td>
+                <td>Mary Wanjiku</td>
+                <td>REG-2025-001</td>
+                <td>Computer Science</td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>STD-102</td>
+                <td>Daniel Otieno</td>
+                <td>REG-2025-002</td>
+                <td>Business Administration</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>STD-103</td>
+                <td>Grace Achieng</td>
+                <td>REG-2025-003</td>
+                <td>Education</td>
+                <td>3</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section id="student-registration" class="form-section">
+          <h3>Student Registration</h3>
+          <form id="studentForm" novalidate>
+            <div class="form-group">
+              <label for="fullName">Student's Full Name</label>
+              <input type="text" id="fullName" name="fullName" placeholder="Enter full name" />
+            </div>
+
+            <div class="form-group">
+              <label for="regNumber">Registration Number</label>
+              <input type="text" id="regNumber" name="regNumber" placeholder="e.g. REG-2025-101" />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="student@email.com" />
+            </div>
+
+            <div class="form-group radio-group">
+              <span>Gender</span>
+              <label><input type="radio" name="gender" value="Male" /> Male</label>
+              <label><input type="radio" name="gender" value="Female" /> Female</label>
+              <label><input type="radio" name="gender" value="Other" /> Other</label>
+            </div>
+
+            <div class="form-group">
+              <label for="programme">Academic Programme</label>
+              <select id="programme" name="programme">
+                <option value="">Select programme</option>
+                <option value="Computer Science">Computer Science</option>
+                <option value="Business Administration">Business Administration</option>
+                <option value="Education">Education</option>
+                <option value="Nursing">Nursing</option>
+              </select>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit">Submit</button>
+              <button type="reset" class="reset-btn">Reset</button>
+            </div>
+
+            <p id="formMessage" aria-live="polite"></p>
+          </form>
+
+          <div id="studentSummary" class="student-summary" aria-live="polite"></div>
+        </section>
+
+        <section id="contact" class="contact-section">
+          <h3>Contact Us</h3>
+          <p>Email: admissions@northbridge.edu</p>
+          <p>Phone: +254 700 000 123</p>
+          <p>Address: 45 University Road, Nairobi, Kenya</p>
+        </section>
+      </main>
+
+      <footer>
+        <p>© 2026 Northbridge University</p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
